@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import listaRoutes from './router/lista.routes.js';
+import usuarioRoutes from './router/usuario.routes.js';
 import conectarDB from './database/db.js';
 
 
@@ -11,8 +11,14 @@ conectarDB();
 app.use(express.json());
 app.use(morgan('dev'));
 
+//Ruta inicial
+app.get('/', (req, res) => {
+    res.send('Bienvenido a la API de usuarios');
+});
+
 // Routes
-app.use(listaRoutes);
+app.use('/api/',usuarioRoutes);
+
 
 
 

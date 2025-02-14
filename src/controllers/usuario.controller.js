@@ -1,10 +1,10 @@
 
 
-const getListaUsuarios = (req, res) => {
+const getUsuarios = (req, res) => {
 
     res.send('Lista de Usuarios');
 }
 
 export const metodos = {
-    getListaUsuarios
+    getUsuarios
 };
