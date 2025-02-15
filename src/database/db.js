@@ -21,7 +21,7 @@ const conectarDB = async () => {
 
     } catch (error) {
         console.error('Error al conectar a MongoDB Compass:', error);
-        process.exit(1);
+        
     }
 };
 
